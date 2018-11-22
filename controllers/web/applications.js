@@ -674,6 +674,14 @@ exports.reset_jwt_secret = function(req, res, next) {
 	}
 }
 
+// GET /idm/applications/:applicationId/data_usages -- Data Usage view for applications
+exports.show_data_usage = function(req, res) {
+
+	debug("--> show_data_usage");
+
+	res.render('applications/data_usage', { csrfToken: req.csrfToken()});
+};
+
 // Function to delete an image
 function delete_image(req, res, image_path, success, redirect_uri, message) {
 	image.destroy(image_path).then(function(val) {

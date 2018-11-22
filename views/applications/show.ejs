@@ -15,6 +15,12 @@
                         <span>manage roles</span>
                     </a>
                 <% } -%>
+                <% if (user_logged_permissions.includes('2')) { -%>
+                    <a href="/idm/applications/<%= application.id %>/data_usages" class="small">
+                        <i class="fa fa-cogs"></i>
+                        <span>Data Usage</span>
+                    </a>
+                <% } -%>
             </h4>
             <div class="logo">
                 <img alt="application logo" src="<%= application.image %>">

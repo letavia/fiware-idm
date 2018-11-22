@@ -1,0 +1,102 @@
+<div id="content_body">
+    <div id="create_application_roles">
+        <div class="site-client-roles">
+            <div class="modal-header">
+                <h3>Data Usage Control</h3>
+            </div>
+            <div id="wrapper" class="form-group">
+                <div id="top_wrapper" class="panel-body">
+                    <div class="panel-body fields">
+                        <div class="panel-body">UID &nbsp;<input type="text" name="license.uid" class="form-control"></div>
+                    </div>
+                    <div class="panel-body buttons">
+                        <button class="add_profile btn btn-default" type="button">Add Profile &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                        <button class="add_conflict btn btn-default" type="button">Add Conflict Strategy &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                        <button class="add_inheritance btn btn-default" type="button">Add Inheritance &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                        <button class="add_policytype btn btn-default" type="button">Declare Policy Type &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                    </div>
+                </div>
+                <div class="panel panel-default panel-body">
+                    <p id="errorMessage" class="text-danger"></p>
+                    <div id="rule_wrapper" class="panel-body">
+                        <div class="panel panel-default" name="license.rules[0]" number="0" style="border-color:#d6e9c6">
+                            <div class="panel-heading" style="border-color:#d6e9c6;background-color:#dff0d8;background-image:none;color:#3c763d;">Rule &nbsp;
+                                <button class="deleteRule btn btn-sm remove" name="license.rules[0]_delete" type="button">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                                <button class="collapseb" type="button" data-toggle="collapse" data-target="[pc='license.rules[0]']"><span class="glyphicon glyphicon-collapse-down"></span></button></div>
+                                <div class="fields panel-collapse collapse in" pc="license.rules[0]">
+                                    <div class="panel-body">Type &nbsp;
+                                        <select class="type form-control" name="license.rules[0].type">
+                                            <option uid="permission">Permission</option>
+                                            <option uid="duty">Obligation</option>
+                                            <option uid="prohibition">Prohibition</option>
+                                        </select>
+                                    </div>
+                                    <div class="panel-body">Action &nbsp;
+                                        <select class="form-control" name="license.rules[0].actions[0].uid" number="0">
+                                        </select>
+                                        <span>To grant the specified Policy to a third party for their use of the Asset.</span>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="panel panel-default" style="border-color:#BD612E" number="0" name="license.rules[0].targets[0]">
+                                            <div class="panel-heading" style="border-color:#BD612E;background-color:#ffb891;background-image:none;color:#BD612E;">Target &nbsp;
+                                                <button class="collapseb" type="button" data-toggle="collapse" data-target="[pc='license.rules[0].targets[0]']"><span class="glyphicon glyphicon-expand"></span></button></div>
+                                                <div class="fields panel-collapse collapse" pc="license.rules[0].targets[0]" aria-expanded="false" style="height: 0px;">
+                                                    <div class="panel-body">URI &nbsp;
+                                                        <input class="form-control" type="text" name="license.rules[0].targets[0].uid">
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="AssetCollection" name="license.rules[0].targets[0].type">Collection</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body buttons panel-collapse collapse" pc="license.rules[0].targets[0]" aria-expanded="false" style="height: 30px;">
+                                                    <button class="add_constraint btn btn-default" type="button" disabled="disabled">Add Refinement &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                                                    <button class="add_logicalConstraint btn btn-default" type="button" disabled="disabled">Add Logical Refinement &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="panel panel-default" style="border-color:#8f26c9" number="0" name="license.rules[0].assigners[0]">
+                                                <div class="panel-heading" style="border-color:#8f26c9;background-color:#daa5f7;background-image:none;color:#8f26c9;">Assigner &nbsp;
+                                                    <button class="_delete btn btn-sm remove" name="{{deleteName}}" type="button">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </button><button class="collapseb" type="button" data-toggle="collapse" data-target="[pc='license.rules[0].assigners[0]']"><span class="glyphicon glyphicon-expand"></span></button></div>
+                                                    <div class="fields panel-collapse collapse" pc="license.rules[0].assigners[0]" aria-expanded="false" style="height: 0px;">
+                                                        <div class="panel-body">URI &nbsp;
+                                                            <input class="form-control" type="text" name="license.rules[0].assigners[0].uid">
+                                                            <div class="checkbox">
+                                                                <label><input type="checkbox" value="PartyCollection" name="license.rules[0].assigners[0].type">Collection</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel-body buttons panel-collapse collapse" pc="license.rules[0].assigners[0]" aria-expanded="false" style="height: 30px;">
+                                                        <button class="add_constraint btn btn-default" type="button" disabled="disabled">Add Refinement &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                                                        <button class="add_logicalConstraint btn btn-default" type="button" disabled="disabled">Add Logical Refinement &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body buttons panel-collapse collapse in" pc="license.rules[0]">
+                                            <button class="add_assigner btn btn-default" type="button">Add Assigner &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                                            <button class="add_assignee btn btn-default" type="button">Add Assignee &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                                            <button class="add_constraint btn btn-default" type="button">Add Constraint &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                                            <button class="add_logicalConstraint btn btn-default" type="button">Add Logical Constraint &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                                            <button class="add_duty btn btn-default" type="button">Add <span class="duty">Duty</span> &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="constraints_wrapper" class="panel-body">
+                                </div>
+                                <div class="buttons">
+                                    <button class="add_rule btn btn-default" type="button">Add Rule &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                                    <button class="add_constraint btn btn-default" type="button">Add Constraint &nbsp; <span style="font-size:16px; font-weight:bold;">+ </span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
